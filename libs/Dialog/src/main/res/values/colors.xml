@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 通用颜色 -->
+    <!-- 透明 -->
+    <color name="transparent">#0000</color>
+    <!-- 白色半透明 -->
+    <color name="halftransparent">#3fffffff</color>
+    <color name="background">@color/grey_241_241_241</color>
+    <color name="text_black">@color/black_52_52_52</color>
+    <color name="text_normal">@color/grey_148_148_148</color>
+    <color name="text_green">@color/green</color>
+    <color name="text_white">@color/white_255_255_255</color>
+    <!-- black -->
+    <color name="black_52_52_52">#343434</color>
+    <!-- grey -->
+    <color name="grey_148_148_148">#949494</color>
+    <color name="grey_241_241_241">#F1F1F1</color>
+    <!-- white -->
+    <color name="white_255_255_255">#FFFFFF</color>
+    <!-- green -->
+    <color name="green">#51aa38</color>
+
+
+</resources>
