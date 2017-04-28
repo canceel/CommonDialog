@@ -62,6 +62,17 @@ CommonDialog commonDialog = new CommonDialog.Builder()
 .setAgreeColor(R.color.text_black)//设置同意按钮颜色，默认黑色
 ```
 
+##### 文字大小设置
+
+~~~java
+.setTitleSize(20)
+.setAgreeSize(16)
+.setCancelSize(13)
+.setMsgSize(15)
+~~~
+
+
+
 ##### 按钮点击处理
 
 ```java
