@@ -38,7 +38,11 @@ public class MainActivity extends AppCompatActivity implements MyDialogLisenter 
                 .setCancelColor(R.color.text_normal)
                 .setAgreeColor(R.color.text_black)
                 .setTitlePosition(Gravity.LEFT)
-                .setImageSpecifications(Utils.dpToPx(mActivity, 50), Utils.dpToPx(mActivity, 50))
+                .setImageSpecifications(100,100)
+                .setTitleSize(20)
+                .setAgreeSize(16)
+                .setCancelSize(13)
+                .setMsgSize(15)
                 .showImage(true)
                 .setMessageString("在设置-应用-CommonDialog-权限中开启相机权限以正常使用拍照，扫一扫等功能")
                 .build();

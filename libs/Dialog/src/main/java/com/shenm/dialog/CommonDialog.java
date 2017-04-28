@@ -64,6 +64,7 @@ public class CommonDialog extends DialogFragment implements View.OnClickListener
         TextView tvAgree = (TextView) view.findViewById(R.id.tv_agree);
         tvTitle.setTextColor(ContextCompat.getColor(getContext(), sDialogConfig.mTitleColor));
         tvTitle.setText(sDialogConfig.mTitleString);
+        tvTitle.setTextSize(sDialogConfig.mTitleSize);
         ivImg.setVisibility(sDialogConfig.isShow ? View.VISIBLE : View.GONE);
         if (sDialogConfig.isShow) {
             ivImg.setImageResource(sDialogConfig.mImageId);
@@ -72,10 +73,13 @@ public class CommonDialog extends DialogFragment implements View.OnClickListener
         }
         tvMsg.setText(sDialogConfig.mMessageString);
         tvMsg.setTextColor(ContextCompat.getColor(getContext(), sDialogConfig.mMessageColor));
+        tvMsg.setTextSize(sDialogConfig.mMessageSize);
         tvCancel.setText(sDialogConfig.mCancelString);
         tvCancel.setTextColor(ContextCompat.getColor(getContext(), sDialogConfig.mCancelColor));
-        tvAgree.setText(sDialogConfig.mSureString);
-        tvAgree.setTextColor(ContextCompat.getColor(getContext(), sDialogConfig.mSureColor));
+        tvCancel.setTextSize(sDialogConfig.mCancelSize);
+        tvAgree.setText(sDialogConfig.mAgreeString);
+        tvAgree.setTextColor(ContextCompat.getColor(getContext(), sDialogConfig.mAgreeColor));
+        tvAgree.setTextSize(sDialogConfig.mAgreeSize);
         tvTitle.setGravity(sDialogConfig.mTitlePosition);
         tvCancel.setOnClickListener(this);
         tvAgree.setOnClickListener(this);
@@ -235,7 +239,7 @@ public class CommonDialog extends DialogFragment implements View.OnClickListener
          * @return
          */
         public Builder setAgreeString(String right) {
-            sDialogConfig.mSureString = right;
+            sDialogConfig.mAgreeString = right;
             return this;
         }
 
@@ -246,7 +250,51 @@ public class CommonDialog extends DialogFragment implements View.OnClickListener
          * @return
          */
         public Builder setAgreeColor(int agreeColor) {
-            sDialogConfig.mSureColor = agreeColor;
+            sDialogConfig.mAgreeColor = agreeColor;
+            return this;
+        }
+
+        /**
+         * 设置Title文字大小
+         *
+         * @param size
+         * @return
+         */
+        public Builder setTitleSize(int size) {
+            sDialogConfig.mTitleSize = size;
+            return this;
+        }
+
+        /**
+         * 设置提示文字大小
+         *
+         * @param size
+         * @return
+         */
+        public Builder setMsgSize(int size) {
+            sDialogConfig.mMessageSize = size;
+            return this;
+        }
+
+        /**
+         * 设置确定按钮文字大小
+         *
+         * @param size
+         * @return
+         */
+        public Builder setAgreeSize(int size) {
+            sDialogConfig.mAgreeSize = size;
+            return this;
+        }
+
+        /**
+         * 设置取消按钮文字大小
+         *
+         * @param size
+         * @return
+         */
+        public Builder setCancelSize(int size) {
+            sDialogConfig.mCancelSize = size;
             return this;
         }
 
